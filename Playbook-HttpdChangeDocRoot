@@ -1,0 +1,32 @@
+- hosts: web
+  vars: 
+   - webpage: "index.html"
+   - packageName: "httpd"
+   - documentDir: " /var/www/html "
+
+  tasks:
+    - name: " install httpd package "
+      package:
+        name: " {{ packageName }} "  
+        state: present
+
+    - name: "Create Document root for  httpd package "
+      file: 
+        state: directory
+        path: " {{ documentDir }} "
+
+    - name: " create or copy new path in config file"
+      copy:
+        dest: /etc/httpd/conf.d/my.conf
+        content: "DocumentRoot {{ documentDir }} /n "
+
+    - name: " Deploy webpage "
+      copy:
+        src: " {{ webpage }} "
+        dest: " {{documentDir }} "
+
+    - name: "reload service httpd "
+      service:
+        name: "httpd"
+        state: reloaded
+        enabled: true 
