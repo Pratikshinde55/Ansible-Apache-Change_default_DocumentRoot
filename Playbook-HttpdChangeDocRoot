@@ -1,32 +1,35 @@
+# Anisble :- change httpd DocumetRoot to var/www/html
+
 - hosts: web
   vars: 
-   - webpage: "index.html"
-   - packageName: "httpd"
-   - documentDir: " /var/www/html "
+    webpage: "index.html"
+    packageName: "httpd"
+    documentDir: "/var/www/html"
 
   tasks:
-    - name: " install httpd package "
+    - name: "Install httpd package"
       package:
-        name: " {{ packageName }} "  
+        name: "{{ packageName }}"  
         state: present
 
-    - name: "Create Document root for  httpd package "
+    - name: "Create Document root for httpd package"
       file: 
         state: directory
-        path: " {{ documentDir }} "
+        path: "{{ documentDir }}"
 
-    - name: " create or copy new path in config file"
+    - name: "Create or copy new path in config file"
       copy:
         dest: /etc/httpd/conf.d/my.conf
-        content: "DocumentRoot {{ documentDir }} /n "
+        content: |
+          DocumentRoot {{ documentDir }}
 
-    - name: " Deploy webpage "
+    - name: "Deploy webpage"
       copy:
-        src: " {{ webpage }} "
-        dest: " {{documentDir }} "
+        src: "{{ webpage }}"
+        dest: "{{ documentDir }}"
 
-    - name: "reload service httpd "
+    - name: "Reload service httpd"
       service:
         name: "httpd"
         state: reloaded
-        enabled: true 
+        enabled: true
