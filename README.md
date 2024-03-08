@@ -74,11 +74,11 @@ Step-2. Create playbook ( "myweb.yml" my playbook name) :
 
 💥playbook explanation💥
 
-A. Here set variables (vars) which for my tasks :-
+ A. Here set variables (vars) which for my tasks :-
 
-"webpage" variable for my local code or webpage which want to copy and deploy
-" packageName" variable for package that i want to install
-" documentDir" variable for my own custom documentRoot
+ "webpage" variable for my local code or webpage which want to copy and deploy
+ " packageName" variable for package that i want to install
+ " documentDir" variable for my own custom documentRoot
 
 
             - hosts: web
@@ -97,15 +97,28 @@ A. Here set variables (vars) which for my tasks :-
                 name: "{{ packageName }}"  
                 state: present
 
-  C.  create document root : 
+ C.  create document root : 
   
- File module is used to create directory & use state is directory,  This Task craete directory name as /var/www/pratik in ansible target nodes 
+ File module is used to create directory & use state is directory,  This Task createte directory as /var/www/pratik in ansible target nodes :
 
 
           - name: "Create Document root for httpd package"
             file: 
               state: directory
               path: "{{ documentDir }}"
+
+ D. This is very important step Httpd configuration file change:
+ 
+ Here Copy module used to  create "my.conf" file at destination "/etc/httpd/conf.d" & and in this "/etc/httpd/conf.d/my.conf" file 'content' attribute
+ create DocumentRoot = documentDir "/var/www/pratik":
+
+
+           - name: "Create or copy new path in config file"
+             copy:
+               dest: /etc/httpd/conf.d/my.conf
+               content: |
+                 DocumentRoot {{ documentDir }}
+
 
 Step-4. Run ansible playbook 
 
