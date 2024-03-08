@@ -20,16 +20,16 @@ In this project , i can create custom Documet Root in httpd by using ansible
 
 ❄️ By Ansible Adhoc command: (manual way) ❄️
 
-1. Install httpd package :
+Step-1. Install httpd package :
 
         #yum install httpd -y
 
-2.  Go inside Httpd internal configuration file , In this file we can create custom documentRoot, "/etc/httpd/conf.d" this httpd Default configuration file location:
+Step-2.  Go inside Httpd internal configuration file , In this file we can create custom documentRoot, "/etc/httpd/conf.d" this httpd Default configuration file location:
 
 
         #cd /etc/httpd/conf.d
 
-3. Create own name or custom name folder inside Httpd configuration file("/etc/httpd/conf.d"), i am creating "my.conf" file & in this file i put my custom documentRoot:
+Step-3. Create own name or custom name folder inside Httpd configuration file("/etc/httpd/conf.d"), i am creating "my.conf" file & in this file i put my custom documentRoot:
 
    my.conf file put :-->  DocumentRoot  /var/www/pratik
 
@@ -38,7 +38,7 @@ In this project , i can create custom Documet Root in httpd by using ansible
 
 Now apache web server read from this filder , It means from browser we connect this apache filder & in this folder we deploy own webpages.
 
-4. After file created then need to restart httpd service (when new settings created ):
+Step-4. After file created then need to restart httpd service (when new settings created ):
 
 
        #systemctl reload httpd
@@ -57,19 +57,28 @@ In ansible-master node install ansible-core and coonect with target node by ssh 
 https://github.com/Pratikshinde55/Ansible-setup-onAWS.git (Refer this link for SSH connection )
 
 
-1. Create file or web page which will weploy ,(index.html) on ansible master node:
+Step-1. Create file or web page which will weploy ,(index.html) on ansible master node:
 
 
  ![Screenshot 2024-03-07 194123](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/53254826-2125-4971-ba8e-f3d1a952c6ca)
 
 
-2. Create playbook ( "myweb.yml" my playbook name) :
+Step-2. Create playbook ( "myweb.yml" my playbook name) :
 
 
           #vim myweb.yml
 
 
 ![Screenshot 2024-03-07 194019](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/232536a4-f6dd-4919-a208-b6dc840f24c0)
+
+
+Step-4. Run ansible playbook 
+
+
+        #ansible-playbook myweb.yml
+
+
+![Screenshot 2024-03-07 193938](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/0469443f-6110-4918-9f5e-ab404410d3a3)
 
 
 
