@@ -66,6 +66,9 @@ https://github.com/Pratikshinde55/Ansible-setup-onAWS.git (Refer this link for S
 2. Create playbook ( "myweb.yml" my playbook name) :
 
 
+          #vim myweb.yml
+
+
 ![Screenshot 2024-03-07 194019](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/232536a4-f6dd-4919-a208-b6dc840f24c0)
 
 
