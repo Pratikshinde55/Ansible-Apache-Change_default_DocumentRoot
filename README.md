@@ -11,8 +11,10 @@
 It is a free and open-source web server software. It's one of the most widely used web servers in the world, known for its reliability and robustness.
 Apache is capable of serving static and dynamic content on the World Wide Web.
 
+" /etc/httpd/ " or  "/etc/apache2/ directory" is common location 
 
-In this project , i can create custom Documet Root in httpd by using ansible 
+
+                In this project , i can create custom Documet Root in httpd by using ansible 
 
 ❄️ By Ansible Adhoc command: (manual way) ❄️
 
