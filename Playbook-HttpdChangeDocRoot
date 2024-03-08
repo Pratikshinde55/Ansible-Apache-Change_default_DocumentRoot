@@ -1,10 +1,10 @@
-# Anisble :- change httpd DocumetRoot to var/www/html
+# Anisble :- change httpd DocumetRoot to custom Root  "var/www/pratik"
 
 - hosts: web
   vars: 
     webpage: "index.html"
     packageName: "httpd"
-    documentDir: "/var/www/html"
+    documentDir: "/var/www/pratik"
 
   tasks:
     - name: "Install httpd package"
