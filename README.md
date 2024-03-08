@@ -83,7 +83,7 @@ Step-4. Run ansible playbook
 
 ⚡Here we can see that automation takes place on Manged node1 & node2 :
 
-At ansible target nodes check what changes happen:
+At ansible target nodes cheack what changes happen:
 
 ![Screenshot 2024-03-07 194252](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/64df6891-ed15-4ac4-a3d2-b59e2c7b2023)
 
