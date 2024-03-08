@@ -88,7 +88,16 @@ A. Here set variables (vars) which for my tasks :-
                 documentDir: "/var/www/pratik"
 
 
+ B. Install Httpd package here use variable packageName
 
+
+          tasks:
+            - name: "Install httpd package"
+              package:
+                name: "{{ packageName }}"  
+                state: present
+
+   
 
 Step-4. Run ansible playbook 
 
