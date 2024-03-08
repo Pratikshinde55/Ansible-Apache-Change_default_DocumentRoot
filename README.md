@@ -47,6 +47,12 @@ Now apache web server read from this filder , It means from browser we connect t
 
 ❄️ By Ansible automation : ( Ansible-playbook) ❄️
 
+I take three AWS cloud instances amazon linux EC2 i use , One instance make ansible-master & remaining to make hosts or managed nodes.
+
+
+![Screenshot 2024-03-07 193702](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/eff832e0-d874-4ad5-8013-4a27da87aed4)
+
+
 
 
 
