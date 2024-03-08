@@ -97,7 +97,15 @@ A. Here set variables (vars) which for my tasks :-
                 name: "{{ packageName }}"  
                 state: present
 
-   
+  C.  create document root : 
+  
+    File module is used to create directory & use state is directory,  This Task craete directory name as /var/www/pratik in ansible target nodes 
+
+
+          - name: "Create Document root for httpd package"
+            file: 
+              state: directory
+              path: "{{ documentDir }}"
 
 Step-4. Run ansible playbook 
 
