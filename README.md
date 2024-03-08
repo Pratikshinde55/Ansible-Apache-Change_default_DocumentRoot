@@ -52,6 +52,10 @@ I take three AWS cloud instances amazon linux EC2 i use , One instance make ansi
 
 ![Screenshot 2024-03-07 193702](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/eff832e0-d874-4ad5-8013-4a27da87aed4)
 
+In ansible-master node install ansible-core and coonect with target node by ssh key Authentication :
+
+https://github.com/Pratikshinde55/Ansible-setup-onAWS.git (Refer this link for SSH connection )
+
 
 
 
