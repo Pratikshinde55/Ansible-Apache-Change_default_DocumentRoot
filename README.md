@@ -107,10 +107,11 @@ Step-2. Create playbook ( "myweb.yml" my playbook name) :
               state: directory
               path: "{{ documentDir }}"
 
- D. This is very important step Httpd configuration file change:
+ D. This is very important step Httpd configuration file change: (DocumentRoot)
  
  Here Copy module used to  create "my.conf" file at destination "/etc/httpd/conf.d" & and in this "/etc/httpd/conf.d/my.conf" file 'content' attribute
- create DocumentRoot = documentDir "/var/www/pratik":
+ create DocumentRoot = documentDir "/var/www/pratik":  
+
 
 
            - name: "Create or copy new path in config file"
@@ -120,7 +121,7 @@ Step-2. Create playbook ( "myweb.yml" my playbook name) :
                  DocumentRoot {{ documentDir }}
 
 
- E. Deploy local webpage "index.html to target nodes destination documentdir "/var/www/pratik/"
+ E. Deploy local webpage "index.html to target nodes destination documentDir "/var/www/pratik/"
 
 
           - name: "Deploy webpage"
@@ -128,6 +129,16 @@ Step-2. Create playbook ( "myweb.yml" my playbook name) :
               src: "{{ webpage }}"
               dest: "{{ documentDir }}"
 
+
+ F. Reload httpd service, After any change make in httpd configuration file then need to reload or resatrt httpd service then new settings apply:
+
+
+         
+          - name: "Reload service httpd"
+            service:
+              name: "httpd"
+              state: reloaded
+              enabled: true
 
 
 Step-4. Run ansible playbook 
