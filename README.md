@@ -57,11 +57,16 @@ In ansible-master node install ansible-core and coonect with target node by ssh 
 https://github.com/Pratikshinde55/Ansible-setup-onAWS.git (Refer this link for SSH connection )
 
 
-1. Create file or web page which will weploy ,(index.html): 
+1. Create file or web page which will weploy ,(index.html) on ansible master node:
 
 
  ![Screenshot 2024-03-07 194123](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/53254826-2125-4971-ba8e-f3d1a952c6ca)
 
+
+2. Create playbook ( "myweb.yml" my playbook name) :
+
+
+![Screenshot 2024-03-07 194019](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/232536a4-f6dd-4919-a208-b6dc840f24c0)
 
 
 
