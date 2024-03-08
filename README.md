@@ -12,12 +12,12 @@ In this project , i can create custom Documet Root in httpd by using ansible
 
         #yum install httpd -y
 
-2.  Go inside Httpd internal config file , In this file we can create custom documentRoot, "/etc/httpd/conf.d" this httpd conf file location:
+2.  Go inside Httpd internal configuration file , In this file we can create custom documentRoot, "/etc/httpd/conf.d" this httpd Default configuration file location:
 
 
         #cd /etc/httpd/conf.d
 
-3. Create own name or custom name folder inside Httpd config file("/etc/httpd/conf.d"), i am creating "my.conf" file & in this file i put my custom documentRoot:
+3. Create own name or custom name folder inside Httpd configuration file("/etc/httpd/conf.d"), i am creating "my.conf" file & in this file i put my custom documentRoot:
 
    my.conf file put :-->  DocumentRoot  /var/www/pratik
 
@@ -32,7 +32,22 @@ Now apache web server read from this filder , It means from browser we connect t
        #systemctl reload httpd
 
 
+
 ❄️ By Ansible automation : ( Ansible-playbook) ❄️
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
