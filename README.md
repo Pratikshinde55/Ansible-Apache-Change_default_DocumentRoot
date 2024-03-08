@@ -120,6 +120,16 @@ Step-2. Create playbook ( "myweb.yml" my playbook name) :
                  DocumentRoot {{ documentDir }}
 
 
+ E. Deploy local webpage "index.html to target nodes destination documentdir "/var/www/pratik/"
+
+
+          - name: "Deploy webpage"
+            copy:
+              src: "{{ webpage }}"
+              dest: "{{ documentDir }}"
+
+
+
 Step-4. Run ansible playbook 
 
 
