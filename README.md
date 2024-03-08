@@ -81,6 +81,12 @@ Step-4. Run ansible playbook
 ![Screenshot 2024-03-07 193938](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/0469443f-6110-4918-9f5e-ab404410d3a3)
 
 
+⚡Here we can see that automation takes place on Manged node1 & node2 :
+
+At ansible target node check what changes happen:
+
+![Screenshot 2024-03-07 194252](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/64df6891-ed15-4ac4-a3d2-b59e2c7b2023)
+
 
 
 
