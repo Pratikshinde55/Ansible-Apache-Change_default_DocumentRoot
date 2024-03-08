@@ -91,6 +91,21 @@ At ansible target nodes check what changes happen:
 ![Screenshot 2024-03-07 194309](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/bd7ecaeb-cae0-4451-b880-3525d5a60f25)
 
 
+🌟 From google or outside world we can able to connect target NOde1 & node2:
+
+
+Ansible Target node 1 : public IP of EC2 instance : node1 : 3.7.69.254
+
+![Screenshot 2024-03-07 194326](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/dd65746a-2ca4-4f91-b27c-33fe6eadf01a)
+
+
+Ansible Target node 2 : public IP of EC2 instance : node2 : 13.201.93.84 
+
+![Screenshot 2024-03-07 194334](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/aea89e62-5bf1-4f8e-9bf6-5f413931c0ca)
+
+
+
+
 
 
 
