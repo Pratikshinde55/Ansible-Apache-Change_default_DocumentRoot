@@ -72,6 +72,24 @@ Step-2. Create playbook ( "myweb.yml" my playbook name) :
 ![Screenshot 2024-03-07 194019](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/232536a4-f6dd-4919-a208-b6dc840f24c0)
 
 
+💥playbook explanation💥
+
+A. Here set variables (vars) which for my tasks :-
+
+"webpage" variable for my local code or webpage which want to copy and deploy
+" packageName" variable for package that i want to install
+" documentDir" variable for my own custom documentRoot
+
+
+            - hosts: web
+              vars: 
+                webpage: "index.html"
+                packageName: "httpd"
+                documentDir: "/var/www/pratik"
+
+
+
+
 Step-4. Run ansible playbook 
 
 
