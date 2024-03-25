@@ -1,4 +1,4 @@
-# Anisble :- change httpd DocumetRoot to custom Root  "var/www/pratik"
+########## "Change httpd default DocumetRoot to custom Root  "var/www/pratik" using ansible playbook" ###############
 
 - hosts: web
   vars: 
