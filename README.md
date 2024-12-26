@@ -39,17 +39,17 @@ I take three AWS Cloud instances Amazon linux EC2, One instance make Ansible-Mas
 
 ![Screenshot 2024-03-07 193702](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/eff832e0-d874-4ad5-8013-4a27da87aed4)
 
-In ansible-master node install ansible-core and coonect with target node by ssh key Authentication :
+In ansible-master node install ansible-core and connect with target node by ssh key Authentication :
 
-https://github.com/Pratikshinde55/Ansible-setup-onAWS.git (Refer this link for SSH connection )
+[Ansible-SetUp-onAWS](https://github.com/Pratikshinde55/Ansible-setup-onAWS.git) 
 
-1. Create file or web page which will weploy ,(index.html) on ansible master node:
+## Step-1: [Create file or web page which will weploy ,(index.html) on ansible master node]
 
 ![Screenshot 2024-03-07 194123](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/53254826-2125-4971-ba8e-f3d1a952c6ca)
 
-2. Create playbook ( "myweb.yml" my playbook name) :
+## Step-2: [Create playbook ( "myweb.yml" my playbook name)]
 
-       vim myweb.yml
+    vim myweb.yml
 
 ![Screenshot 2024-03-07 194019](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/232536a4-f6dd-4919-a208-b6dc840f24c0)
 
@@ -122,17 +122,13 @@ https://github.com/Pratikshinde55/Ansible-setup-onAWS.git (Refer this link for S
               enabled: true
 
 
-Step-4. Run ansible playbook 
+## Step-4: [Run ansible-playbook] 
 
-
-        #ansible-playbook myweb.yml
-
+      ansible-playbook myweb.yml
 
 ![Screenshot 2024-03-07 193938](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/0469443f-6110-4918-9f5e-ab404410d3a3)
 
-
-⚡Here we can see that automation takes place on Manged node1 & node2 :
-
+### Here we can see that Automation takes place on Manged node1 & node2 :
 At ansible target nodes check what changes happened:
 
 ![Screenshot 2024-03-07 194252](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/64df6891-ed15-4ac4-a3d2-b59e2c7b2023)
@@ -141,13 +137,10 @@ At ansible target nodes check what changes happened:
 ![Screenshot 2024-03-07 194309](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/bd7ecaeb-cae0-4451-b880-3525d5a60f25)
 
 
-🌟 From google or outside world we can able to connect target NOde1 & node2:
-
-
+### From google or outside world we can able to connect target Node1 & node2:
 Ansible Target node 1 : public IP of EC2 instance : node1 : 3.7.69.254
 
 ![Screenshot 2024-03-07 194326](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/dd65746a-2ca4-4f91-b27c-33fe6eadf01a)
-
 
 Ansible Target node 2 : public IP of EC2 instance : node2 : 13.201.93.84 
 
