@@ -15,11 +15,11 @@ In this project, I can create custom Document Root in httpd by using ansible-pla
 
 1. Install httpd package :
 
-      yum install httpd -y
+       yum install httpd -y
 
 2. Go inside Httpd internal configuration file , In this file we can create custom documentRoot, "/etc/httpd/conf.d" this httpd Default configuration file location:
 
-      cd /etc/httpd/conf.d
+       cd /etc/httpd/conf.d
 
 3. Create own name or custom name folder inside Httpd configuration file("/etc/httpd/conf.d"), i am creating "my.conf" file & in this file i put my custom documentRoot:
 
@@ -33,10 +33,9 @@ Now apache web server read from this filder , It means from browser we connect t
 
        systemctl reload httpd
 
-❄️ By Ansible automation : ( Ansible-playbook) ❄️
+## By Ansible automation:  [Ansible-playbook]
 
-I take three AWS cloud instances amazon linux EC2 i use , One instance make ansible-master & remaining to make hosts or managed nodes.
-
+I take three AWS Cloud instances Amazon linux EC2, One instance make Ansible-Master & remaining Instances to make hosts or managed nodes.
 
 ![Screenshot 2024-03-07 193702](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/eff832e0-d874-4ad5-8013-4a27da87aed4)
 
@@ -44,23 +43,17 @@ In ansible-master node install ansible-core and coonect with target node by ssh 
 
 https://github.com/Pratikshinde55/Ansible-setup-onAWS.git (Refer this link for SSH connection )
 
+1. Create file or web page which will weploy ,(index.html) on ansible master node:
 
-Step-1. Create file or web page which will weploy ,(index.html) on ansible master node:
+![Screenshot 2024-03-07 194123](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/53254826-2125-4971-ba8e-f3d1a952c6ca)
 
+2. Create playbook ( "myweb.yml" my playbook name) :
 
- ![Screenshot 2024-03-07 194123](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/53254826-2125-4971-ba8e-f3d1a952c6ca)
-
-
-Step-2. Create playbook ( "myweb.yml" my playbook name) :
-
-
-          #vim myweb.yml
-
+       vim myweb.yml
 
 ![Screenshot 2024-03-07 194019](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/232536a4-f6dd-4919-a208-b6dc840f24c0)
 
-
-💥playbook explanation💥
+- playbook explanation:
 
  A. Here set variables (vars) which for my tasks :-
 
@@ -161,25 +154,3 @@ Ansible Target node 2 : public IP of EC2 instance : node2 : 13.201.93.84
 ![Screenshot 2024-03-07 194334](https://github.com/Pratikshinde55/Ansible-httpd-documentRoot/assets/145910708/aea89e62-5bf1-4f8e-9bf6-5f413931c0ca)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
