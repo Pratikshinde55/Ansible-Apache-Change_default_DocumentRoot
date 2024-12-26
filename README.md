@@ -23,7 +23,7 @@ In this project, I can create custom Document Root in httpd by using ansible-pla
 
 3. Create own name or custom name folder inside Httpd configuration file("/etc/httpd/conf.d"), i am creating "my.conf" file & in this file i put my custom documentRoot:
 
-my.conf file put :-->  DocumentRoot  /var/www/pratik
+- my.conf file put :-->  DocumentRoot  /var/www/pratik
 
        vi  my.conf
 
