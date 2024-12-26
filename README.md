@@ -11,7 +11,7 @@ Apache is capable of serving static and dynamic content on the World Wide Web.
 
 In this project, I can create custom Document Root in httpd by using ansible-playbook
 
-## By Ansible Adhoc command: [Manual way]
+## By Ansible Adhoc Command: [Manual way]
 
 1. Install httpd package :
 
@@ -33,7 +33,7 @@ Now apache web server read from this filder , It means from browser we connect t
 
        systemctl reload httpd
 
-## By Ansible automation:  [Ansible-playbook]
+## By Ansible Automation:  [Ansible-playbook]
 
 I take three AWS Cloud instances Amazon linux EC2, One instance make Ansible-Master & remaining Instances to make hosts or managed nodes.
 
